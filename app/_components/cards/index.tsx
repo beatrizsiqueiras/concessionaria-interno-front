@@ -1,13 +1,16 @@
 "use client";
 
-import { BiSolidMessageRounded } from "react-icons/bi";
-import { BsPersonPlus } from "react-icons/bs";
-import { CgFileDocument } from "react-icons/cg";
-import { FaCar, FaChartLine, FaPlus } from "react-icons/fa";
-import { GrSchedule } from "react-icons/gr";
-import { HiUserPlus } from "react-icons/hi2";
-import { MdOutlinePointOfSale } from "react-icons/md";
-import { TbReportAnalytics } from "react-icons/tb";
+import {
+    PiCalendarPlusThin,
+    PiCarThin,
+    PiChartLineUpThin,
+    PiChatsCircleThin,
+    PiIdentificationCardThin,
+    PiMoneyThin,
+    PiNotebookThin,
+    PiPlusThin,
+    PiUserPlusThin,
+} from "react-icons/pi";
 
 const Cards = () => {
     return (
@@ -18,8 +21,8 @@ const Cards = () => {
             <div className='grid grid-cols-4 gap-5 mt-10 m-4'>
                 <a href='/client/create'>
                     <div className='bg-[#f4f5f8] shadow-lg rounded'>
-                        <div className='relative text-9xl mt-3'>
-                            <HiUserPlus />
+                        <div className='relative text-7xl mt-3'>
+                            <PiUserPlusThin />
                         </div>
                         <div className='p-5'>
                             <h3 className='mb-1 mt-1 text-xl font-bold'>
@@ -34,13 +37,13 @@ const Cards = () => {
                         </div>
                     </div>
                 </a>
-                <a href='/sale/create'>
+                <a>
                     <div className='bg-[#f4f5f8] shadow-lg rounded'>
-                        <div className='relative text-9xl mt-3 mb-11 ml-3'>
-                            <FaCar />
-                            <FaPlus
-                                size={50}
-                                className='mt-[-95px] ml-[130px]'
+                        <div className='relative text-7xl mt-3 mb-7 ml-3'>
+                            <PiCarThin />
+                            <PiPlusThin
+                                size={40}
+                                className='mt-[-65px] ml-[60px]'
                             />
                         </div>
                         <div className='p-5'>
@@ -56,10 +59,10 @@ const Cards = () => {
                         </div>
                     </div>
                 </a>
-                <a href='/'>
+                <a href='/sale/create'>
                     <div className='bg-[#f4f5f8] shadow-lg rounded'>
-                        <div className='relative text-9xl mt-3'>
-                            <MdOutlinePointOfSale />
+                        <div className='relative text-7xl mt-3 ml-2'>
+                            <PiMoneyThin />
                         </div>
                         <div className='p-5'>
                             <h3 className='mb-1 mt-1 text-xl font-bold'>
@@ -76,11 +79,11 @@ const Cards = () => {
                 </a>
                 <a href='/'>
                     <div className='bg-[#f4f5f8] shadow-lg rounded'>
-                        <div className='relative text-9xl mb-9 mt-3'>
-                            <CgFileDocument />
-                            <FaPlus
-                                size={50}
-                                className='mt-[-85px] ml-[119px]'
+                        <div className='relative text-7xl mb-7 mt-3'>
+                            <PiIdentificationCardThin />
+                            <PiPlusThin
+                                size={40}
+                                className='mt-[-65px] ml-[60px]'
                             />
                         </div>
                         <div className='p-5'>
@@ -98,8 +101,8 @@ const Cards = () => {
                 </a>
                 <a href='/'>
                     <div className='bg-[#f4f5f8] shadow-lg rounded'>
-                        <div className='relative text-9xl mt-3'>
-                            <BiSolidMessageRounded />
+                        <div className='relative text-7xl mt-3'>
+                            <PiChatsCircleThin />
                         </div>
                         <div className='p-5'>
                             <h3 className='mb-1 mt-1 text-xl font-bold'>
@@ -116,8 +119,8 @@ const Cards = () => {
                 </a>
                 <a href='/'>
                     <div className='bg-[#f4f5f8] shadow-lg rounded'>
-                        <div className='relative text-9xl mt-3 ml-3'>
-                            <GrSchedule />
+                        <div className='relative text-7xl mt-3 ml-3'>
+                            <PiCalendarPlusThin />
                         </div>
                         <div className='p-5'>
                             <h3 className='mb-1 mt-1 text-xl font-bold'>
@@ -134,8 +137,8 @@ const Cards = () => {
                 </a>
                 <a href='/'>
                     <div className='bg-[#f4f5f8] shadow-lg rounded'>
-                        <div className='relative text-9xl mt-3'>
-                            <TbReportAnalytics />
+                        <div className='relative text-7xl mt-3'>
+                            <PiNotebookThin />
                         </div>
                         <div className='p-5'>
                             <h3 className='mb-1 mt-1 text-xl font-bold'>
@@ -149,8 +152,8 @@ const Cards = () => {
                 </a>
                 <a href='/'>
                     <div className='bg-[#f4f5f8] shadow-lg rounded'>
-                        <div className='relative text-9xl mt-3 ml-3'>
-                            <FaChartLine />
+                        <div className='relative text-7xl mt-3 ml-3'>
+                            <PiChartLineUpThin />
                         </div>
                         <div className='p-5'>
                             <h3 className='mb-1 mt-1 text-xl font-bold'>

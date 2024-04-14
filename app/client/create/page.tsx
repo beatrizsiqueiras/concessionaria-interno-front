@@ -274,6 +274,16 @@ const CreateClient = () => {
                     ""
                 )}
             </div>
+            <div className='grid grid-cols gap-3 p-5 mr-24 justify-center'>
+                    <div className='mt-6 flex justify-end'>
+                        <button
+                            type='submit'
+                            className='bg-green-600 text-white p-4 rounded font-bold'
+                        >
+                            Confirmar venda
+                        </button>
+                    </div>
+                </div>
         </div>
     );
 };

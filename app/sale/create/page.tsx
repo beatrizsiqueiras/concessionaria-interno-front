@@ -11,9 +11,23 @@ const CreateSale = () => {
         useState(false);
     const [isVehicleListVisible, setIsVehicleListVisible] = useState(false);
 
-    const setClientSection = () => {};
-    const setVehicleSection = () => {};
-    const setPaymentDetailsSection = () => {};
+    const setClientSection = () => {
+        setIsClientListVisible(true);
+        setIsPaymentDetailsVisible(false);
+        setIsVehicleListVisible(false);
+    };
+
+    const setVehicleSection = () => {
+        setIsVehicleListVisible(true);
+        setIsClientListVisible(false);
+        setIsPaymentDetailsVisible(false);
+    };
+
+    const setPaymentDetailsSection = () => {
+        setIsPaymentDetailsVisible(true);
+        setIsClientListVisible(false);
+        setIsVehicleListVisible(false);
+    };
 
     return (
         <div>
@@ -25,22 +39,19 @@ const CreateSale = () => {
                         </h2>
                         <div className='grid grid-cols-3 gap-5 m-1 bg-white p-6 rounded shadow-lg font-semibold text-lg'>
                             <a
-                                href='#clientsList'
-                                className='text-center hover:text-gray-500 w-[100%]'
+                                className='text-center hover:text-gray-500 w-[100%] cursor-pointer'
                                 onClick={setClientSection}
                             >
                                 Selecionar Cliente
                             </a>
                             <a
-                                href='#carsList'
-                                className='text-center hover:text-gray-500 w-[100%]'
+                                className='text-center hover:text-gray-500 w-[100%] cursor-pointer'
                                 onClick={setVehicleSection}
                             >
                                 Selecionar Veículos
                             </a>
                             <a
-                                href='#paymentMethod'
-                                className='text-center hover:text-gray-500 w-[100%]'
+                                className='text-center hover:text-gray-500 w-[100%] cursor-pointer'
                                 onClick={setPaymentDetailsSection}
                             >
                                 Forma de Pagamento

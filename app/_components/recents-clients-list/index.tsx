@@ -1,4 +1,8 @@
 import React from "react";
+import { CiEdit } from "react-icons/ci";
+import { LiaUserEditSolid } from "react-icons/lia";
+import { PiChartLineUpThin } from "react-icons/pi";
+import { TbReportSearch, TbUserOff } from "react-icons/tb";
 
 interface Client {
     name: string;
@@ -52,7 +56,7 @@ const RecentsClientsList = () => {
             <div className='ml-4 font-semibold text-3xl mb-8 mt-[-10px] text-[#006494]'>
                 <h2>Clientes Recentes</h2>
             </div>
-            <div className="m-12">
+            <div className='m-12'>
                 <table className='w-[100%] text-center border-collapse'>
                     <thead>
                         <tr className='border-b-2 border-gray-300'>
@@ -61,6 +65,7 @@ const RecentsClientsList = () => {
                             <th>Estado</th>
                             <th>Cidade</th>
                             <th>Status</th>
+                            <th>Ações</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -71,6 +76,19 @@ const RecentsClientsList = () => {
                                 <td>{client.state}</td>
                                 <td>{client.city}</td>
                                 <td>{client.status ? "Ativo" : "Inativo"}</td>
+                                <td>
+                                    <div className='inline-flex text-xl'>
+                                        <a>
+                                            <LiaUserEditSolid />
+                                        </a>
+                                        <a className='ml-5'>
+                                            <TbReportSearch />
+                                        </a>
+                                        <a className='ml-5'>
+                                            <TbUserOff />
+                                        </a>
+                                    </div>
+                                </td>
                             </tr>
                         ))}
                     </tbody>

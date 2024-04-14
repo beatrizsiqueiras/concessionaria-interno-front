@@ -10,6 +10,7 @@ interface Car {
     price: string;
     details: string;
     yearManufacture: string;
+    identification: string;
 }
 
 const CarsTable = () => {
@@ -20,6 +21,7 @@ const CarsTable = () => {
             price: "140.000",
             details: "0 KM | Automático | Flex",
             yearManufacture: "2024",
+            identification: "0930202",
         },
         {
             img: "https://dsae.s3.amazonaws.com/07462149000131/Fotos/0K0213_01.jpg?u=20230915154104&auto=format&ixlib=react-9.5.1-beta.1&w=291&h=207&dpr=1&q=75",
@@ -27,6 +29,7 @@ const CarsTable = () => {
             price: "124.000",
             details: "0KM | Automático | Flex",
             yearManufacture: "2024",
+            identification: "321122",
         },
         {
             img: "https://dsae.s3.amazonaws.com/87317789000197/Fotos/0K0246_01.jpg?u=20230814182046&auto=format&ixlib=react-9.5.1-beta.1&w=291&h=207&dpr=1&q=75",
@@ -34,6 +37,7 @@ const CarsTable = () => {
             price: "80.000",
             details: "0 KM | Manual | Flex",
             yearManufacture: "2024",
+            identification: "76554",
         },
         {
             img: "https://dsae.s3.amazonaws.com/18320255000288/Fotos/0K0485_01.jpg?u=20230728112918&auto=format&ixlib=react-9.5.1-beta.1&w=291&h=207&dpr=1&q=75",
@@ -41,6 +45,7 @@ const CarsTable = () => {
             price: "300.000",
             details: "0 Km | Automático | Diesel",
             yearManufacture: "2024",
+            identification: "121030",
         },
     ];
 
@@ -60,6 +65,7 @@ const CarsTable = () => {
                 <table className='w-[100%] text-start border-collapse'>
                     <thead>
                         <tr className='border-b-2 border-gray-300'>
+                            <th>Número de Identificação</th>
                             <th className='p-3'>Modelo</th>
                             <th>Preço</th>
                             <th>Detalhes</th>
@@ -69,17 +75,18 @@ const CarsTable = () => {
                     <tbody>
                         {cars.map((car, index) => (
                             <tr
-                                className='border-b-2 border-gray-100'
+                                className='border-b-2 border-gray-100 text-center'
                                 key={index}
                             >
+                                <td>{car.identification}</td>
                                 <td className='p-3'>{car.name}</td>
+                                <td>R$ {car.price}</td>
                                 <td>
-                                   R$ {car.price}
+                                    {car.details} - {car.yearManufacture}
                                 </td>
-                                <td>{car.details} - {car.yearManufacture}</td>
-                                <td className='bg-[#006494] w-6 h-6 flex justify-center rounded-[100%]'>
+                                <td className='bg-[#006494] w-6 h-6 flex justify-center rounded-[100%] mt-4'>
                                     <a
-                                        href=''
+                                        href='#'
                                         className='text-center text-white text-xl'
                                     >
                                         <BiPlus />
@@ -88,20 +95,17 @@ const CarsTable = () => {
                             </tr>
                         ))}
                     </tbody>
-                    <tfoot>
-                        <tr className=''>
-                            <td></td>
-                            <td
-                                colSpan={3}
-                                className='text-center inline-flex text-3xl space-x-12'
-                            >
-                                <GrFormPrevious />
-                                <MdNavigateNext />
-                            </td>
-                            <td></td>
-                        </tr>
-                    </tfoot>
                 </table>
+            </div>
+            <div className='grid grid-cols gap-3 p-5 mr-24 justify-center'>
+                <div className='justify-end text-center inline-flex text-3xl space-x-12 mt-6'>
+                    <a className='cursor-pointer'>
+                        <GrFormPrevious />
+                    </a>
+                    <a className='cursor-pointer'>
+                        <MdNavigateNext />
+                    </a>
+                </div>
             </div>
         </div>
     );

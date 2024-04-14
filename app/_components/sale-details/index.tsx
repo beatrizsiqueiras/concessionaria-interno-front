@@ -8,11 +8,58 @@ const SaleDetails = () => {
     return (
         <div className='bg-gray-200'>
             <div className='m-4'>
-                <div className='grid grid-cols-2 gap-3 p-5'>
+                <div className='grid grid-cols-3 gap-3 p-5'>
+                    <div className='...'>
+                        <div className='mt-6 block'>
+                            <p className='font-bold mb-4'>Pagamento:</p>
+                            <select
+                                name=''
+                                id=''
+                                className='border-3 border-gray-500 bg-white h-14 w-[90%] text-center'
+                            >
+                                <option value='creditcard'>Selecione</option>
+                                <option value='creditcard'>A prazo</option>
+                                <option value='creditcard'>À vista</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div className='...'>
+                        <div className='mt-6 block'>
+                            <p className='font-bold mb-4'>Valor de Entrada (R$):</p>
+                            <input
+                                type='number'
+                                min={0}
+                                value={0.00}
+                                name=''
+                                id=''
+                                className='border-3 border-gray-500 bg-white h-14 w-[90%] text-center'
+                            />
+                        </div>
+                    </div>
                     <div className='...'>
                         <div className='mt-6 block'>
                             <p className='font-bold mb-4'>
-                                Forma de Pagamento:
+                                Forma de Pagamento (Entrada):
+                            </p>
+                            <select
+                                name=''
+                                id=''
+                                className='border-3 border-gray-500 bg-white h-14 w-[90%] text-center'
+                            >
+                                <option value='creditcard'>Selecione</option>
+                                <option value='creditcard'>Credito</option>
+                                <option value='creditcard'>Débito</option>
+                                <option value='creditcard'>Dinheiro</option>
+                                <option value='creditcard'>Pix</option>
+                                <option value='creditcard'>Boleto</option>
+                                <option value='creditcard'>Carnê</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div className='...'>
+                        <div className='mt-6 block'>
+                            <p className='font-bold mb-4'>
+                                Forma de Pagamento (Restante):
                             </p>
                             <select
                                 name=''
@@ -109,13 +156,19 @@ const SaleDetails = () => {
                     </div>
                     <div className='...'>
                         <div className='mt-6 block'>
-                            <p className='font-bold mb-4 text-lg'>
-                                Total
-                            </p>
-                            <p className='font-bold mb-4 text-3xl'>
-                                R$ 55.589
-                            </p>
+                            <p className='font-bold mb-4 text-lg'>Total</p>
+                            <p className='font-bold mb-4 text-3xl'>R$ 55.589</p>
                         </div>
+                    </div>
+                </div>
+                <div className='grid grid-cols gap-3 p-5 mr-24 justify-center'>
+                    <div className='mt-6 flex justify-end'>
+                        <button
+                            type='submit'
+                            className='bg-green-600 text-white p-4 rounded font-bold'
+                        >
+                            Confirmar venda
+                        </button>
                     </div>
                 </div>
             </div>
