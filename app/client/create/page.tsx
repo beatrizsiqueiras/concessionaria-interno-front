@@ -280,7 +280,7 @@ const CreateClient = () => {
                             type='submit'
                             className='bg-green-600 text-white p-4 rounded font-bold'
                         >
-                            Confirmar venda
+                            Salvar
                         </button>
                     </div>
                 </div>
