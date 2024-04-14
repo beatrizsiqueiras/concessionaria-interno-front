@@ -16,7 +16,7 @@ const Cards = () => {
                 <h2>Ações rápidas</h2>
             </div>
             <div className='grid grid-cols-4 gap-5 mt-10 m-4'>
-                <a href='/'>
+                <a href='/client/create'>
                     <div className='bg-[#f4f5f8] shadow-lg rounded'>
                         <div className='relative text-9xl mt-3'>
                             <HiUserPlus />
@@ -34,7 +34,7 @@ const Cards = () => {
                         </div>
                     </div>
                 </a>
-                <a href='/'>
+                <a href='/sale/create'>
                     <div className='bg-[#f4f5f8] shadow-lg rounded'>
                         <div className='relative text-9xl mt-3 mb-11 ml-3'>
                             <FaCar />

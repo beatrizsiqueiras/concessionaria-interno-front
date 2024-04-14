@@ -47,33 +47,46 @@ const RecentsCars = () => {
 
     return (
         <div>
-            <div className='grid grid-cols-6 gap-4'>
+            <div className='grid grid-cols-6 gap-4 mt-4'>
                 <div className='col-start-1 col-span-6'>
-                    {cars.map((car, index: number) => (
-                        <div key={index} className='bg-[#f4f5f8] shadow-md'>
-                            <div className='relative'>
-                                <img
-                                    src={car.img}
-                                    alt={car.name}
-                                    className='w-full'
-                                />
-                            </div>
-                            <div className='p-5'>
-                                <h3 className='font-bold text-gray-700'>
-                                    {car.name}
-                                </h3>
-                                <h2 className='mb-1 mt-1 text-2xl font-bold'>
-                                    R$ {car.price}
-                                </h2>
-                                <div className='inline-flex'>
-                                    <p>{car.details}</p>
-                                    <span className='ml-2 text-blue-950 font-bold'>
-                                        {car.yearManufacture}
-                                    </span>
+                    <div className='py-16 bg-gray-200'>
+                        <h2 className='text-start font-semibold text-3xl text-[#006494] mb-10 ml-5'>
+                            Veículos recentes
+                        </h2>
+                        <div className='grid grid-cols-4 gap-5 mt-1 m-14'>
+                            {cars.map((car, index: number) => (
+                                <div
+                                    key={index}
+                                    className='bg-[#f4f5f8] shadow-md'
+                                >
+                                    <div className='relative'>
+                                        <img
+                                            src={car.img}
+                                            alt={car.name}
+                                            className='w-full'
+                                        />
+                                    </div>
+                                    <div className='p-5'>
+                                        <h3 className='font-bold text-gray-700'>
+                                            {car.name}
+                                        </h3>
+                                        <h2 className='mb-1 mt-1 text-2xl font-bold'>
+                                            R$ {car.price}
+                                        </h2>
+                                        <div className='inline-flex'>
+                                            <p>{car.details}</p>
+                                            <span className='ml-2 text-blue-950 font-bold'>
+                                                {car.yearManufacture}
+                                            </span>
+                                        </div>
+                                    </div>
                                 </div>
+                            ))}
+                            <div className='absolute -translate-x-0 -translate-y-[-400%] right-5 mr-[-15px] text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer'>
+                                <BsChevronCompactRight size={30} />
                             </div>
                         </div>
-                    ))}
+                    </div>
                 </div>
             </div>
         </div>
