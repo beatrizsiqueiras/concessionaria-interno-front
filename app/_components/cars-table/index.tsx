@@ -45,10 +45,7 @@ const CarsTable = () => {
     ];
 
     return (
-        <div className='bg-gray-200 border-2 border-white'>
-            <div className='ml-4 font-semibold text-1xl mb-1 mt-2 text-[#006494]'>
-                <h2>Selecione um carro</h2>
-            </div>
+        <div className='bg-gray-200'>
             <div className='ml-4 font-semibold text-1xl mb-1 mt-2 text-[#006494] flex justify-center'>
                 <input
                     type='text'
